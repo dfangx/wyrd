@@ -1,3 +1,9 @@
+# Wyrd - compile issues fixed
+
+I fixed compile issues of wyrd in a modern archlinux environment, based on haguenau's repository (original wyrd source code is nowhere to be found).
+
+Below is the original Readme.
+
 # Wyrd "flexible formats" fork
 
 Wyrd is a curses front-end to remind. It is written in OCaml.
