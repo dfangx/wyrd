@@ -1,6 +1,13 @@
 Wyrd ChangeLog
 --------------------------------------------------------------------------------
 
+2020-07-30     Release 1.4.7:
+
+    * Fixed Fix compile problem due to a modification of how OCaml handles
+      strings and bytes.
+
+    * Fixed a 'configure' error (term.h not found).
+
 2013-02-02     Release 1.4.6:
 
     * Fixed a failure to quote filenames in the editor commands provided by
