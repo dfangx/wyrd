@@ -1010,11 +1010,11 @@ Wyrd.
 \section{Contact info}
 Wyrd author: Paul Pelzl \texttt{<pelzlpj@gmail.com>} \\
 %@% IF LATEX %@%
-Wyrd website: \texttt{http://pessimization.com/software/wyrd} \\
-Wyrd project page (bug reports, code repository, etc.): \texttt{http://launchpad.net/wyrd} \\
+Wyrd project page (bug reports, code repository, etc.): \texttt{https://github.com/Perdu/wyrd} \\
+Old project page: \texttt{http://launchpad.net/wyrd} \\
 %@% ELSE %@%
-Wyrd website: \URL{http://pessimization.com/software/wyrd} \\
-Wyrd project page (bug reports, code repository, etc.): \URL{http://launchpad.net/wyrd} \\
+Wyrd project page (bug reports, code repository, etc.): \URL{https://github.com/Perdu/wyrd} \\
+Old project page: \URL{http://launchpad.net/wyrd} \\
 %@% END-IF %@%
 
 \section{Miscellaneous}
