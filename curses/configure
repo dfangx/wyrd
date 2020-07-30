@@ -3669,6 +3669,7 @@ fi
 $as_echo_n "checking for term.h... " >&6; }
 cat confdefs.h - <<_ACEOF >conftest.$ac_ext
 /* end confdefs.h.  */
+#define NCURSES_INTERNALS
 #include <term.h>
 int
 main ()
