@@ -10,6 +10,8 @@ Wyrd serves two purposes:
 
 Wyrd also requires only a fraction of the resources of most calendar programs available today.
 
+![Screenshot](screenshot.png?raw=true "Screenshot")
+
 ## Installation
 
 This section describes how to install Wyrd by compiling from source. Wyrd has been packaged for a number of popular Linux/Unix variants, so you may be able to save yourself some time by installing from a package provided by your OS distribution.
