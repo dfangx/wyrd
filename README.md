@@ -1,39 +1,48 @@
-# Wyrd - compile issues fixed
+# Wyrd
 
-I fixed compile issues of wyrd in a modern archlinux environment, based on haguenau's repository (original wyrd source code is nowhere to be found).
+*Because you're tired of waiting for your bloated calendar program to start up.*
 
-Below is the original Readme.
+Wyrd is a text-based front-end to Remind, a sophisticated calendar and alarm program available from Roaring Penguin Software, Inc.
 
-# Wyrd "flexible formats" fork
+Wyrd serves two purposes:
+- It displays reminders in a scrollable timetable view suitable for visualizing your calendar at a glance.
+- It makes creating and editing reminders fast and easy. However, Wyrd does not hide Remind's textfile programmability, for this is what makes Remind a truly powerful calendaring system.
 
-Wyrd is a curses front-end to remind. It is written in OCaml.
+Wyrd also requires only a fraction of the resources of most calendar programs available today.
 
-This repository is based off the Debian source for Wyrd version 1.4.6;
-I could not find a reachable, public repository.
+## Installation
 
-While the mainline version of Wyrd allows configuring a bunch of
-strings in the rc file `~/.wyrdrc`, for example `set
-timed_template="REM %monname% %mday% %year% AT %hour%:%min% DURATION
-1:00 MSG "`, it does not allow configuring the exact expansions for
-`%monname%` and friends. This is especially annoying for `%mday%`,
-which is hard-coded to the equivalent of `printf "%d"`; lines written
-in the first nine days of a month and the following ones will not line
-up properly:
+This section describes how to install Wyrd by compiling from source. Wyrd has been packaged for a number of popular Linux/Unix variants, so you may be able to save yourself some time by installing from a package provided by your OS distribution.
 
+Wyrd is designed to be portable to most Unix-like operating systems, including GNU/Linux, *BSD, and Mac OS X. Before installing Wyrd, your system must have the following software installed:
+- OCaml 2 ≥ 3.08
+- the ncurses library 3 (and development headers)
+- Remind 4 ≥ 3.1.0
+- GNU make 5
+- the Unix pager application, less
+
+Wyrd may be compiled by executing the following at the root of the source tree:
+```bash
+./configure
+make
 ```
-REM Jul 8 2017 AT 08:00 DURATION 1:00 MSG The month starts!
-REM Jul 15 2017 AT 08:00 DURATION 1:00 MSG Mid-month ;_;
+After compiling, become root and execute
+```bash
+make install
 ```
-
-The present version of Wyrd adds format specifiers `monname_fmt`,
-`mon_fmt`, `mday_fmt`, `year_fmt`, `hour_fmt`, `min_fmt`,
-`wdayname_fmt`, and `wday_fmt`. When configuring the format for
-`%wday%` as `set mday_fmt = "%2d"`, the two timestamps above will
-instead be rendered as follows:
-
+to complete the installation process. The make command here should correspond to GNU make; on some systems (particularly *BSD), you may need to use gmake.
+If your ncurses library was built with wide character support, Wyrd can be configured to render UTF-8 encoded reminders. To enable this option, use the command
+```bash
+./configure --enable-utf8
 ```
-REM Jul  8 2017 AT 09:00 DURATION 1:00 MSG The month starts!
-REM Jul 15 2017 AT 08:00 DURATION 1:00 MSG Mid-month ^_^
-```
+when configuring the sources.
 
-Observe how the `MSG` columns now line up nicely. **As they should.**
+## Notes
+
+2020 note: I fixed compile issues of wyrd in a modern (arch)linux environment, based on haguenau's repository. I am not planning to expand this software, but I'll maintain the AUR package.
+
+Forked from https://github.com/haguenau/wyrd
+
+Original Bazaar repository: https://bazaar.launchpad.net/~pelzlpj/wyrd/wyrd-dev/files
+
+
