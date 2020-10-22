@@ -42,9 +42,9 @@ CPPFLAGS     = @CPPFLAGS@
 LDFLAGS      = @LDFLAGS@
 INSTALL      = @INSTALL@
 
-
+LDFLAGS = -cclib -ltinfo
 INCLUDES = -I ./curses
-BFLAGS   = -pp camlp4o -g $(INCLUDES) -unsafe-string
+BFLAGS   = -pp camlp4o -g $(INCLUDES) -unsafe-string 
 OFLAGS   = -pp camlp4o -g $(INCLUDES) -unsafe-string
 DEPFLAGS = -pp camlp4o
 
@@ -79,10 +79,10 @@ byte: $(NAME).byte
 opt: $(NAME).opt
 
 $(NAME).byte: $(COBJS) $(CURSES_CMA) $(CMO)
-	$(OCAMLC) $(BFLAGS) -o $@ $(CURSES_CMA) $(COBJS) $(CMA) $(CMO) 
+	$(OCAMLC) $(BFLAGS) -o $@ $(CURSES_CMA) $(COBJS) $(CMA) $(CMO) $(LDFLAGS)
 
 $(NAME).opt: $(COBJS) $(CURSES_CMXA) $(CMX)
-	$(OCAMLOPT) $(OFLAGS) -o $@ $(CURSES_CMXA) $(COBJS) $(CMXA) $(CMX)
+	$(OCAMLOPT) $(OFLAGS) -o $@ $(CURSES_CMXA) $(COBJS) $(CMXA) $(CMX) $(LDFLAGS)
 
 
 VERSION=1.4.7
