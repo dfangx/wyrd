@@ -41,9 +41,9 @@ when configuring the sources.
 
 ## Notes
 
-2020 note: I fixed compile issues of wyrd in a modern (arch)linux environment, based on haguenau's repository. I am not planning to expand this software, but I'll maintain the AUR package.
+2020 note: I fixed compile issues of wyrd in a modern Gentoo linux environment, based on Perdu's repository. I am not planning to expand this software, but this works for my Gentoo system.
 
-Forked from https://github.com/haguenau/wyrd
+Forked from https://github.com/Perdu/wyrd
 
 Original Bazaar repository: https://bazaar.launchpad.net/~pelzlpj/wyrd/wyrd-dev/files
 
